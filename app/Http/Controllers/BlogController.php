@@ -73,7 +73,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('pages.blog.show')->with('post', $post);
     }
 
     /**

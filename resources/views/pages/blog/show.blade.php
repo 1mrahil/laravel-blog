@@ -17,12 +17,10 @@
        {{$post->body}}<br><br>
         </div>
         <div>
-       {!!Form::open(['action'=> ['BlogController@edit', $post->id], 'method' => 'POST',])!!}
-       {{Form::hidden('_method', 'DELETE')}} 
-       {{Form::submit('Aanpassen', ['class' =>'btn btn-primary'])}}
+       {!! Form::open(['action' = ['PostController@destroy', $post->id], 'method' =>'POST' 'class' = 'pull-right')]) !!}
        {{Form::hidden('_method', 'DELETE')}} 
        {{Form::submit('Verwijderen', ['class' =>'btn btn-danger'])}}
-        {!! Form::close() !!}
+       {!! Form::close() !!}
       </div>
 
   
