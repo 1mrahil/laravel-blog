@@ -9,7 +9,7 @@
 @section('content')
 <h3>{{$post->titel}}</h3>
   
-  <div style="margin: 5% 5%;">
+  <div>
       <hr>
       <small>Geplaatst op {{$post->created_at}}</small>
       <hr>
