@@ -17,7 +17,8 @@
        {{$post->body}}<br><br>
         </div>
         <div>
-       {!! Form::open(['action' = ['PostController@destroy', $post->id], 'method' =>'POST' 'class' = 'pull-right')]) !!}
+       <a href="/pages/blog/{{$post->id}}/edit" class="btn btn-primary">Wijzig</a>
+       {!!Form::open(['action' => ['BlogController@destroy', $post->id], 'method' =>'POST', 'class' => 'pull-right'])!!}
        {{Form::hidden('_method', 'DELETE')}} 
        {{Form::submit('Verwijderen', ['class' =>'btn btn-danger'])}}
        {!! Form::close() !!}

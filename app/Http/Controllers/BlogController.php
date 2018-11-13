@@ -46,11 +46,8 @@ class BlogController extends Controller
         $post->body = $request->input('body');
         $post->save();
 
-        //return redirect('/pages/blog')->with('succes', 'Post geplaatst');
-        return redirect('pages/blog/')->with([
-            'flash_message' => 'Geplaatst',
-            'flash_message_important' => false
-          ]);
+        return redirect('/pages/blog')->with('succes', 'Post geplaatst');
+      
     }
 
     /**
@@ -74,7 +71,7 @@ class BlogController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('pages.blog.show')->with('post', $post);
+        return view('pages.blog.edit')->with('post', $post);
     }
 
     /**
@@ -86,7 +83,22 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        {
+            $this->validate($request, [
+                'titel' => 'required',
+                'body' => 'required'
+            ]);
+            
+            $post = Post::find($id);
+            $post->titel = $request->input('titel');
+            $post->body = $request->input('body');
+            $post->save();
+    
+            
+            return redirect('pages/blog/')->with('succes', 'Post gewijzigd!'
+                
+              );
+        }
     }
 
     /**
@@ -100,9 +112,8 @@ class BlogController extends Controller
         $post = Post::findOrFail($id);
         $post ->delete();
 
-        return redirect('pages/blog/')->with([
-            'flash_message' => 'Verwijderd',
-            'flash_message_important' => false
-          ]);
-    }
+        return redirect('pages/blog/')->with('error', 'Post verwijderd!!'
+                
+    );
+}
 }

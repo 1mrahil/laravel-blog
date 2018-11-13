@@ -1,9 +1,12 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
+.btn btn-primary {
+    float: right;
+}
 h1, h3 {
-    margin:5% 5%;
+    margin-bottom:5%;
 
 }
 

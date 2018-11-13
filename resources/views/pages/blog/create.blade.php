@@ -18,7 +18,7 @@
             {{Form::label('body', 'Tekst')}}<br>
             {{Form::textarea('body', '', ['class' =>'', 'placeholder' => 'Tekst'])}}
         </div>
-        <div style="margin-left: 10%;">{{Form::submit('Plaatsen', [])}}</div>
+        <div style="margin-left: 10%;">{{Form::submit('Plaatsen', ['class' => 'btn btn-primary' ])}}</div>
         
 
     {!! Form::close() !!}

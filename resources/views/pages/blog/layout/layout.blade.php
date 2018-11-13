@@ -7,8 +7,8 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ ('https://range100.herokuapp.com/css/app.css') }}">
     <link rel="stylesheet" href="{{ ('https://range100.herokuapp.com/css/blog.css') }}">
-    <!--<link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">-->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 
 </head>
 <nav class="navbar navbar-fixed-top navbar-light" style="background-color: #e3f2fd;">
@@ -25,10 +25,10 @@
 
 <body>
     <div class="container">
-    @yield('messages')
+    @include('inc.messages')
     @yield('content')
     </div>
-    
+ 
 </body>
 </html>
 
