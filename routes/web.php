@@ -22,6 +22,12 @@ Route::get('/pages/test/contact', function () {
     return view('pages.test.contact');
 });
 
+
+
+Route::get('pages/blog/contact', 'ContactUsController@contactUs');
+
+Route::post('pages/blog/contact', ['as' => 'contactus.store', 'uses' => 'ContactUsController@contactUsPost'] );
+
 Route::resource('pages/blog', 'BlogController');
 
 
