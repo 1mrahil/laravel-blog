@@ -11,8 +11,8 @@
     <h1>Post aanpassen</h1><br>
     {!!Form::open(['action'=> ['BlogController@update', $post->id], 'method' => 'POST'])!!}
         <div style="display: block; margin: 5% 10%;">
-            {{Form::label('titel', 'Titel')}}<br>
-            {{Form::text('titel', $post->titel, ['class' =>''])}}
+            {{Form::label('title', 'Titel')}}<br>
+            {{Form::text('title', $post->title, ['class' =>''])}}
         </div>
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('body', 'Tekst')}}<br>

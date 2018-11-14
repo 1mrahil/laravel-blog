@@ -1,14 +1,13 @@
 @extends('pages.blog.layout.layout')
 @section ('title')
 
-{{$post->titel}}
+{{$post->title}}
 
 @endsection
 
 
 @section('content')
-<h3>{{$post->titel}}</h3>
-  
+<h3>{{$post->title}}</h3>
   <div>
       <hr>
       <small>Geplaatst op {{$post->created_at}}</small>

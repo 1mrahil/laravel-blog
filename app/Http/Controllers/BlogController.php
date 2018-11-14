@@ -37,17 +37,17 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'titel' => 'required',
+            'title' => 'required',
             'body' => 'required'
         ]);
-        
+
         $post = new Post;
-        $post->titel = $request->input('titel');
+        $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save();
 
         return redirect('/pages/blog')->with('succes', 'Post geplaatst');
-      
+
     }
 
     /**
@@ -85,19 +85,17 @@ class BlogController extends Controller
     {
         {
             $this->validate($request, [
-                'titel' => 'required',
+                'title' => 'required',
                 'body' => 'required'
             ]);
-            
+
             $post = Post::find($id);
-            $post->titel = $request->input('titel');
+            $post->title = $request->input('title');
             $post->body = $request->input('body');
             $post->save();
-    
-            
-            return redirect('pages/blog/')->with('succes', 'Post gewijzigd!'
-                
-              );
+
+
+            return redirect('pages/blog/')->with('succes', 'Post gewijzigd!');
         }
     }
 
@@ -110,10 +108,10 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
-        $post ->delete();
+        $post->delete();
 
-        return redirect('pages/blog/')->with('error', 'Post verwijderd!'
-                
-    );
-}
+        return redirect('pages/blog/')->with('error', 'Post verwijderd!');
+    }
+
+   
 }

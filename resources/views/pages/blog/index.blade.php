@@ -10,7 +10,7 @@
     @if(count($posts)> 0)
       @foreach($posts as $post)
         <div class="jumbotron text-center" style="display: block; margin: 5% 10%;">
-          <h3 ><a href="/pages/blog/{{$post->id}}">{{$post->titel}}</a></h3>
+          <h3 ><a href="/pages/blog/{{$post->id}}">{{$post->title}}</a></h3>
           <small>Geplaatst op {{$post->created_at}}</small>
         </div>
   
