@@ -1,4 +1,4 @@
-@extends('pages.blog.layout.layout')
+@extends('layouts.app')
 @section ('title')
 
   Mijn posts

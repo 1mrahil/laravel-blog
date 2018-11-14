@@ -1,4 +1,4 @@
-@extends('pages.blog.layout.layout')
+@extends('layouts.layout')
 
 @section ('title')
 
