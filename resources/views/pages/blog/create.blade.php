@@ -16,7 +16,7 @@
         </div>
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('body', 'Tekst')}}<br>
-            {{Form::textarea('body', '', ['class' =>'', 'placeholder' => 'Tekst'])}}
+            {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' =>'form-control', 'placeholder' => 'Tekst'])}}
         </div>
         <div style="margin-left: 10%;">{{Form::submit('Plaatsen', ['class' => 'btn btn-primary' ])}}</div>
         

@@ -112,7 +112,7 @@ class BlogController extends Controller
         $post = Post::findOrFail($id);
         $post ->delete();
 
-        return redirect('pages/blog/')->with('error', 'Post verwijderd!!'
+        return redirect('pages/blog/')->with('error', 'Post verwijderd!'
                 
     );
 }

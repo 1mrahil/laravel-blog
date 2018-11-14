@@ -11,23 +11,19 @@
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 
 </head>
-<nav class="navbar navbar-fixed-top navbar-light" style="background-color: #e3f2fd;">
-    <div class="container-fluid">
-        <a class="nav-link" href="/pages/blog" >Home</a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Contact</a>
-        <a class="nav-link" href="/pages/blog/create">Create Post</a>
-    </div>
-    
 
-</nav>
 
 
 <body>
-    <div class="container">
+    @include('inc.navbar')
+    <div class="container"><br>
     @include('inc.messages')
     @yield('content')
     </div>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"> </script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
  
 </body>
 </html>
