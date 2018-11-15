@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section ('title')
 
 {{$post->title}}
@@ -8,7 +8,7 @@
 
 @section('content')
 <h3>{{$post->title}}</h3>
-  <div>
+  <div class="mx-auto" style="width: 50%;">
       <hr>
       <small>Geplaatst op {{$post->created_at}}</small>
       <hr>
