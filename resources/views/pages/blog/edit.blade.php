@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-
+<main class="py-4">
     <h1>Post aanpassen</h1><br>
     {!!Form::open(['action'=> ['BlogController@update', $post->id], 'method' => 'POST'])!!}
         <div style="display: block; margin: 5% 10%;">
@@ -21,5 +21,7 @@
         {{Form::hidden('_method','PUT')}}
         {{Form::submit('Wijzig', ['class' => 'btn btn-primary'])}}
     {!! Form::close() !!}
+</main>
+    
 @endsection
   

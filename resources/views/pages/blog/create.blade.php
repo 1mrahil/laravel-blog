@@ -7,8 +7,8 @@
 @endsection
 
 @section('content')
-
-    <h1 style="margin: 5% 10%;">Plaats een post</h1><br>
+<main class="py-4">
+    <h1 style="margin:10% 10% 0% 10%;">Plaats een post</h1><br>
     {!!Form::open(['action'=> 'BlogController@store', 'method' => 'POST'])!!}
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('titel', 'Titel')}}<br>
@@ -17,12 +17,15 @@
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('body', 'Tekst')}}<br>
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' =>'form-control', 'placeholder' => 'Tekst'])}}
+            {{Form::submit('Plaatsen', ['class' => 'btn btn-primary float-left mt-5 mb-5' ])}}
         </div>
-        <div style="margin-left: 10%;">{{Form::submit('Plaatsen', ['class' => 'btn btn-primary' ])}}</div>
+        
         
 
     {!! Form::close() !!}
+</main>
 
+    
 @endsection
 
  

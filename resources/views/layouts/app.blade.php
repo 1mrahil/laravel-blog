@@ -22,7 +22,7 @@
 </head>
 <body>
     @include('inc.navbar')
-    <main class="py-4">
+    <main>
             @include('inc.messages')
             @yield('content')
     </main>
