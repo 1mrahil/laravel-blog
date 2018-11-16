@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main style>
+<main style="margin-top:10%;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
