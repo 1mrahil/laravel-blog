@@ -1,8 +1,5 @@
 @extends('layouts.app')
 <style>
-    i{
-        margin-top: 0.2em;
-    }
   
     .hero-image{
         width: 100%;
@@ -21,6 +18,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color:white;
+    }
+
+    i{
+        margin-top: 0.2em;
     }
 </style>
 
