@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use Mail;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\ContactUs;
+
 
 class ContactUsController extends Controller
 {
@@ -19,9 +21,18 @@ class ContactUsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
-            'message' => 'required'
-        ]);
+            'message' => 'min:10'
 
+        ]);
+        
+        Mail::send('emails.contact', [
+            'msg' => $request->message
+        ], function ($mail) use($request) 
+        {$mail->from($request->email, $request->name);
+        
+        $mail->to('rensvandenbrink@gmail.com')->subject('Contactformulier');
+        });
+        
         contactUs::create($request->all());
 
         return back()->with('succes', 'Bedankt voor je bericht!');
