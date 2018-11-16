@@ -1,8 +1,5 @@
 @extends('layouts.app')
 <style>
-    i{
-        margin-top: 0.2em;
-    }
   
     .hero-image{
         width: 100%;
@@ -22,13 +19,17 @@
         transform: translate(-50%, -50%);
         color:white;
     }
+
+    i{
+        margin-top: 0.2em;
+    }
 </style>
 
 @section ('content')
 
 
 
-    <div class="hero-image">
+    <div style="margin-top:-10%;" class="hero-image">
             <div class="hero-text">
                 <h1>Begin je reis <a href="/pages/blog">hier</a></h1>
             </div>
