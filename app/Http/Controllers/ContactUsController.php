@@ -26,11 +26,13 @@ class ContactUsController extends Controller
         ]);
         
         Mail::send('emails.contact', [
-            'msg' => $request->message
+            'text' => 'view',
+            'msg' => $request->message,
+            'email' => $request->email
         ], function ($mail) use($request) 
         {$mail->from($request->email, $request->name);
         
-        $mail->to('rensvandenbrink@gmail.com')->subject('Contactformulier');
+        $mail->to('selamat.jalan237@gmail.com')->subject('Contactformulier');
         });
         
         contactUs::create($request->all());
