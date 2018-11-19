@@ -9,6 +9,7 @@
 @section('content')
 <main class="py-4">
     <h1>Post aanpassen</h1><br>
+    {{ csrf_field() }}
     {!!Form::open(['action'=> ['BlogController@update', $post->id], 'method' => 'POST'])!!}
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('title', 'Titel')}}<br>
