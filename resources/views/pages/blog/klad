@@ -1,1 +1,4 @@
-style="display: block; margin: 5% 10%;"
+Schema::table('posts', function(Blueprint $table){
+        $table->unsignedInteger('user_id');
+
+        $table->foreign('user_id')->references('id')->on('users');
