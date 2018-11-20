@@ -1,6 +1,8 @@
-<h3>Nieuw bericht via contactformulier</h3>
+<h3>Nieuw bericht via contactformulier:</h3>
 
     
     {{ $msg }}
+
+   Van {{ $email }}
 
 
