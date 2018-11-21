@@ -8,7 +8,7 @@
 
 @section('content')
 <main class="py-4">
-  <h3 class="m-5">{{$post->title}}</h3>
+  <h3 class="mx-auto" style="width: 50%;">{{$post->title}}</h3><br>
   <div class="mx-auto" style="width: 50%;">
       <hr>
       <small>Geplaatst op {{$post->created_at}}</small>
