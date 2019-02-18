@@ -1,14 +1,12 @@
 @extends('layouts.app')
 
-@section ('title')
+@section('title', 'SELEMAT JALAN | Neem contact op')
 
-  Neem contact op
-
-@endsection
 
 @section('content')
 <main class="py-5">
     <h1 style="margin: 0% 10%;">Laat een bericht achter</h1><br>
+    @csrf
     {!!Form::open(['action'=> 'ContactUsController@contactUsPost', 'method' => 'POST'])!!}
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('name', 'Naam')}}<br>

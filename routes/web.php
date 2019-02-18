@@ -14,15 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/pages/test/', function () {
-    return view('pages.test.index');
-});
-
-Route::get('/pages/test/contact', function () {
-    return view('pages.test.contact');
-});
-
-
 
 Route::get('pages/blog/contact', 'ContactUsController@contactUs');
 

@@ -1,32 +1,34 @@
 @extends('layouts.app')
 
-@section ('title')
+@section('title', 'SELEMAT JALAN | Post plaatsen')
 
-  Plaats een post
-
-@endsection
 
 @section('content')
-<main class="py-4">
-    <h1 style="margin-left:10%;">Plaats een post</h1><br>
-    {{ csrf_field() }}
-    {!!Form::open(['action'=> 'BlogController@store', 'method' => 'POST'])!!}
-        <div style="display: block; margin: 5% 10%;">
-            {{Form::label('title', 'Titel')}}<br>
-            {{Form::text('title', '', ['class' =>'', 'placeholder' => 'Titel'])}}
-        </div>
-        <div style="display: block; margin: 5% 10%;">
-            {{Form::label('body', 'Tekst')}}<br>
-            {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' =>'form-control', 'placeholder' => 'Tekst'])}}
-            {{Form::submit('Plaatsen', ['class' => 'btn btn-primary float-left mt-5 mb-5' ])}}
-        </div>
-        
-        
-
-    {!! Form::close() !!}
-</main>
-
-    
+    <div class="container py-5 mt-5 mb-5">
+        <h3 class="pb-5">Nieuwe post</h3>
+        <form method="POST" action="/blogs" enctype="multipart/form-data" file="true">
+            @csrf
+            <fieldset>
+                <div class="form-group">
+                    <label class="form-control-label pb-2" for="title" name="title">Titel</label>
+                    <input class="form-control" name="title" type="text" placeholder="Titel" value="{{ old('title') }}" required>
+                    <small class="text-danger"></small>
+                </div> 
+                <div class="form-group">
+                    <label class="form-control-label pb-2" for="body">Tekst</label>
+                    <textarea name="body" id="article-ckeditor" cols="30" rows="10" class="form-control" placeholder="Tekst" required>{{ old('body') }}</textarea>
+                    <small class="text-danger"></small>
+                </div>
+                {{-- <div class="form-group">
+                    <label for=""></label>
+                    <input type="file" class="form-control-file" name="cover_image" aria-describedby="fileHelpId">
+                    <small id="fileHelpId" class="form-text text-muted">Kies een afbeelding</small>
+                </div> --}}
+                <button class="btn btn-primary text-white" type="submit">Plaatsen</button>
+            </fieldset>
+        </form>
+    </div>
 @endsection
+
 
  

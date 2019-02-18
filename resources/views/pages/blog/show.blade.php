@@ -1,15 +1,16 @@
 @extends('layouts.app')
 @section ('title')
 
-{{$post->title}}
+SELAMAT JALAN | {{$post->title}}
 
 @endsection
 
 
 @section('content')
 <main class="py-4">
-  <h3 class="m-5">{{$post->title}}</h3>
+  
   <div class="mx-auto" style="width: 50%;">
+    <h3 class="py-5">{{$post->title}}</h3>
       <hr>
       <small>Geplaatst op {{$post->created_at}}</small>
       <hr>
