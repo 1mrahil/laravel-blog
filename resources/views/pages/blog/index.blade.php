@@ -1,9 +1,7 @@
 @extends('layouts.app')
-@section ('title')
 
-  Recente posts
+@section('title', 'SELEMAT JALAN | Recente posts')
 
-@endsection
 
 @section('content')
 <main class="py-5">
