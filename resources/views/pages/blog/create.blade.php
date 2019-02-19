@@ -6,7 +6,7 @@
 @section('content')
     <div class="container py-5 mt-5 mb-5">
         <h3 class="pb-5">Nieuwe post</h3>
-        <form method="POST" action="/blogs" enctype="multipart/form-data" file="true">
+        <form method="POST" action="/pages/blog" enctype="multipart/form-data" file="true">
             @csrf
             <fieldset>
                 <div class="form-group">
