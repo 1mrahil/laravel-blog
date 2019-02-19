@@ -22,6 +22,7 @@
     @else
       <p>Geen posts aangetroffen!</p>
     @endif
+    
   </main>
 
 @endsection

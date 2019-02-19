@@ -18,12 +18,14 @@ SELAMAT JALAN | {{$post->title}}
        {!!$post->body!!}<br><br>
         </div>
         <div>
+      @auth
        <a href="/pages/blog/{{$post->id}}/edit" class="btn btn-primary">Wijzig</a>
        {!!Form::open(['action' => ['BlogController@destroy', $post->id], 'method' =>'POST', 'class' => 'float-right'])!!}
        {{Form::hidden('_method', 'DELETE')}} 
        {{Form::submit('Verwijderen', ['class' =>'btn btn-danger'])}}
        {!! Form::close() !!}
       </div>
+      @endauth
 </main>
 
 

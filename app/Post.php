@@ -11,8 +11,13 @@ class Post extends Model
 
     public $timestamps = true;
 
+    protected $fillable = [
+        'title',
+        'body',
+    ];
+
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 }
 
