@@ -44,13 +44,31 @@ class BlogController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|min:3|max:30',
-            'body' => 'required|min:3'
+            'body' => 'required|min:3',
+            'cover_image' => 'image|nullable|max:2048'
         ]);
 
+        //handle file upload
+        if($request->hasFile('cover_image')){
+            // Get filename with the extension
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('cover_image')->guessClientExtension();
+            // Filename to store
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+        }
+        
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        $post->cover_image = $fileNameToStore;
         $post->save();
 
         return redirect('/pages/blog')->with('succes', 'Post geplaatst');

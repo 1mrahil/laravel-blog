@@ -10,11 +10,11 @@
     {!!Form::open(['action'=> 'ContactUsController@contactUsPost', 'method' => 'POST'])!!}
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('name', 'Naam')}}<br>
-            {{Form::text('name', '', ['class' =>'', 'placeholder' => 'Naam'])}}
+            {{Form::text('name', '', ['class' =>'col-sm-12', 'placeholder' => 'Naam'])}}
         </div>
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('email', 'Email')}}<br>
-            {{Form::text('email', '', ['class' =>'', 'placeholder' => 'voorbeeld@voorbeeld.com'])}}
+            {{Form::text('email', '', ['class' =>'col-sm-12', 'placeholder' => 'voorbeeld@voorbeeld.com'])}}
         </div>
         <div style="display: block; margin: 5% 10%;">
             {{Form::label('message', 'Tekst')}}<br>
