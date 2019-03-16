@@ -20,7 +20,7 @@
         <div class="col-md-8 col-sm-8">
           <div class="card-body">
             <h3 class="card-title"><a href="/pages/blog/{{$post->id}}">{{$post->title}}</a></h3>
-            <small class="card-text text-muted">Geplaatst op {{$post->created_at}}</small>
+            <small class="card-text text-white text-muted">Geplaatst op {{$post->created_at}}</small>
           </div>
         </div>
         
