@@ -11,6 +11,7 @@ SELAMAT JALAN | {{$post->title}}
   
   <div class="mx-auto" style="width: 50%;">
     <h3 class="py-5">{{$post->title}}</h3>
+    <img class="img-fluid" src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->cover_image}}">
       <hr>
       <small>Geplaatst op {{$post->created_at}}</small>
       <hr>
