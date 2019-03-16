@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -111,12 +112,36 @@ class BlogController extends Controller
         {
             $this->validate($request, [
                 'title' => 'required|min:3|max:30',
-                'body' => 'required|min:3'
+                'body' => 'required|min:3',
+                'cover_image' => 'image|nullable|max:2048'
             ]);
+
+            if($request->hasFile('cover_image')){
+                //delete old image
+
+                // get filename with the extension
+                $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+                // get just filename
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+                // get just ext
+                $extension = $request->file('cover_image')->guessClientExtension();
+                // filename to store
+                $fileNameToStore= $filename.'_'.time().'.'.$extension;
+                // upload Image
+                $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+            } else {
+                $fileNameToStore = 'noimage.jpg';
+            }
 
             $post = Post::find($id);
             $post->title = $request->input('title');
             $post->body = $request->input('body');
+            if($request->hasFile('cover_image')){
+                if($post->cover_image != 'noimage.jpg'){
+                    Storage::delete('public/cover_images'.$post->cover_image);
+                }
+                $post->cover_image = $fileNameToStore;
+            }
             $post->save();
 
 

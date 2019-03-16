@@ -20,11 +20,11 @@
                 <textarea name="body" id="article-ckeditor" cols="30" rows="10" class="form-control" placeholder="Tekst" required>{{ $post->body }}</textarea>
                 <small class="text-danger"></small>
             </div>
-            {{-- <div class="form-group">
+            <div class="form-group">
                 <label for=""></label>
                 <input type="file" class="form-control-file" name="cover_image" aria-describedby="fileHelpId">
                 <small id="fileHelpId" class="form-text text-muted">Kies een afbeelding</small>
-            </div> --}}
+            </div>
             <button class="btn btn-primary text-white" type="submit">Wijzigen</button>
         </fieldset>
     </form>
