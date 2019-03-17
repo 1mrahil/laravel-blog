@@ -73,7 +73,7 @@ class BlogController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/pages/blog')->with('succes', 'Post geplaatst');
+        return redirect('/pages/blog')->with('succes', 'Post geplaatst!');
 
     }
 
@@ -145,7 +145,7 @@ class BlogController extends Controller
             $post->body = $request->input('body');
             if($request->hasFile('cover_image')){
                 if($post->cover_image != 'noimage.jpg'){
-                    Storage::delete('public/cover_images'.$post->cover_image);
+                    Storage::delete('public/cover_images/'.$post->cover_image);
                 }
                 $post->cover_image = $fileNameToStore;
             }
@@ -173,13 +173,12 @@ class BlogController extends Controller
 
         if($post->cover_image != 'noimage.jpg'){
             //delete image
-            Storage::delete('public/cover_images'.$post->cover_image);
-        }
+          Storage::delete('public/cover_images/'.$post->cover_image);
+        }  
 
         $post->delete();
 
         return redirect('pages/blog/')->with('error', 'Post verwijderd!');
     }
-
    
 }
