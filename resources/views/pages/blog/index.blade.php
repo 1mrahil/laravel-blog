@@ -28,9 +28,7 @@
         </div>
       </div>
       
-       
-  
-      @endforeach
+       @endforeach
       {{$posts->links()}}
     @else
       <p class="text-center">Geen posts aangetroffen!</p>

@@ -1,6 +1,7 @@
-    
+{{-- style="background-color:rgba(0,0,0,0.5) !important;" --}}
+
 <div id="app">
-        <nav style="background-color:rgba(0,0,0,0.5) !important;" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav  class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid" >
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Selamat Jalan') }}
