@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Post;
 use App\User;
-use Illuminate\Support\Facades\Storage;
+
 
 class BlogController extends Controller
 {
@@ -97,6 +98,12 @@ class BlogController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+
+         //check for correct user
+         if(auth()->user()->id !==$post->user_id){
+            return redirect ('pages/blog')->with('error', 'Gebruiker niet geautoriseerd!' );
+        }
+
         return view('pages.blog.edit')->with('post', $post);
     }
 
@@ -158,6 +165,17 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
+
+        //check for correct user
+        if(auth()->user()->id !==$post->user_id){
+            return redirect ('pages/blog')->with('error', 'Gebruiker niet geautoriseerd!' );
+        }
+
+        if($post->cover_image != 'noimage.jpg'){
+            //delete image
+            Storage::delete('public/cover_images'.$post->cover_image);
+        }
+
         $post->delete();
 
         return redirect('pages/blog/')->with('error', 'Post verwijderd!');
