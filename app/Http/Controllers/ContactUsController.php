@@ -21,12 +21,14 @@ class ContactUsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
+            'subject' => 'required|min:3',
             'message' => 'min:10'
 
         ]);
         
         Mail::send('emails.contact', [
             'email' => $request->email,
+            'subject' => $request->subject,
             'msg' => $request->message
         ], function ($mail) use($request) 
         {$mail->from($request->email, $request->name);

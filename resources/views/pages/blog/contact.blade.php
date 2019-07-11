@@ -13,8 +13,8 @@
      <div class="form-group has-warning">
        <div class="form-row">
          <div class="col-sm-12">
-           <label class="form-control-label" for="name">Naam*</label>
-           <input name="name" class="form-control form-control-danger" id="name" type="text" value="{{ old('name') }}" placeholder="naam" required>
+           {{-- <label class="form-control-label" for="name">Naam*</label> --}}
+           <input name="name" class="form-control form-control-danger" id="name" type="text" value="{{ old('name') }}" placeholder="Naam*" required>
            <small class="form-text text-muted" id="emailHelp">*verplicht</small>
            <small class="text-danger"></small>
          </div>
@@ -23,23 +23,23 @@
          <div class="form-group has-warning">
            <div class="form-row">
              <div class="col-sm-12">
-               <label class="form-control-label" for="email">Email*</label>
-               <input class="form-control form-control-danger" id="email" type="email" name="email" value="{{ old('email') }}" placeholder="voorbeeld@voorbeeld.com" aria-describedby="emailHelp" required>
+               {{-- <label class="form-control-label" for="email">Email*</label> --}}
+               <input class="form-control form-control-danger" id="email" type="email" name="email" value="{{ old('email') }}" placeholder="voorbeeld@voorbeeld.com*" aria-describedby="emailHelp" required>
                <small class="form-text text-muted" id="emailHelp">*verplicht, wij delen uw emailadres niet met anderen</small>
                <small class="text-danger"></small>
              </div>
            </div><!-- form-row -->
          </div><!-- form-group has-warning -->
          
-         {{-- wordt nog toegevoegd <div class="form-group has-warning">
-           <label class="form-control-label" for="subject" name="subject" required>Onderwerp*</label>
-           <input class="form-control form-control-danger" name="subject" type="text" placeholder="onderwerp" value="{{ old('subject') }}" required>
+         <div class="form-group has-warning">
+           {{-- <label class="form-control-label" for="subject" name="subject" required>Onderwerp*</label> --}}
+           <input class="form-control form-control-danger" name="subject" type="text" placeholder="Onderwerp*" value="{{ old('subject') }}" required>
            <small class="form-text text-muted" id="emailHelp">*verplicht</small>
            <small class="text-danger"></small>
-         </div>--}}
+         </div>
          <div class="form-group has-warning">
-           <label class="form-control-label" for="message" name="message">Bericht*</label>
-           <textarea name="message" id="text" cols="30" rows="10" class="form-control form-control-danger" placeholder="laat een bericht achter" required>{{ old('message') }}</textarea>
+           {{-- <label class="form-control-label" for="message" name="message">Bericht*</label> --}}
+           <textarea name="message" id="text" cols="30" rows="10" class="form-control form-control-danger" placeholder="Laat een bericht achter*" required>{{ old('message') }}</textarea>
            <small class="form-text text-muted" id="emailHelp">*verplicht</small>
            <small class="text-danger"></small>
          </div>

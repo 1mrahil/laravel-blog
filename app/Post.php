@@ -11,11 +11,7 @@ class Post extends Model
 
     public $timestamps = true;
 
-    protected $fillable = [
-        'title',
-        'body',
-        'cover_image'
-    ];
+    protected $guarded = [];
 
     public function user(){
         return $this->belongsTo(User::class);
