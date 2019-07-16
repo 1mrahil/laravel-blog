@@ -12,7 +12,7 @@
             <fieldset>
                 <div class="form-group">
                     <label class="form-control-label pb-2" for="title" name="title">Titel</label>
-                    <input class="form-control" name="title" type="text" placeholder="Titel" value="{{ old('title') }}" required>
+                    <input class="form-control" name="title" type="text" placeholder="Titel" value="{{ old('title') }}" required autofocus>
                     <small class="text-danger"></small>
                 </div> 
                 <div class="form-group">
@@ -25,7 +25,7 @@
                     <input type="file" class="form-control-file" name="cover_image" aria-describedby="fileHelpId">
                     <small id="fileHelpId" class="form-text text-muted">Kies een afbeelding</small>
                 </div>
-                <button class="btn btn-primary text-white" type="submit">Plaatsen</button>
+                <button class="btn btn-outline-dark" type="submit">Plaatsen</button>
             </fieldset>
         </form>
     </div>

@@ -23,7 +23,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
                         <li class="nav-item"><a class="nav-link" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://plus.google.com/" target="_blank"><i class="fa fa-instagram fa-fw"></i></a></li>
                         <!-- Authentication Links -->
                         @guest
                        

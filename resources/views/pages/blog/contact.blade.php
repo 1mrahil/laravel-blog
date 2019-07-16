@@ -14,7 +14,7 @@
        <div class="form-row">
          <div class="col-sm-12">
            {{-- <label class="form-control-label" for="name">Naam*</label> --}}
-           <input name="name" class="form-control form-control-danger" id="name" type="text" value="{{ old('name') }}" placeholder="Naam*" required>
+           <input name="name" class="form-control form-control-danger" id="name" type="text" value="{{ old('name') }}" placeholder="Naam*" required autofocus>
            <small class="form-text text-muted" id="emailHelp">*verplicht</small>
            <small class="text-danger"></small>
          </div>
@@ -44,31 +44,9 @@
            <small class="text-danger"></small>
          </div>
    </fieldset>
-   <button class="btn btn-primary text-white" type="submit">Verzenden</button>
+   <button class="btn btn-outline-dark" type="submit">Verzenden</button>
  </form>
  </div><!-- container p-5 -->
 
-{{--<main class="py-5">
-    <h1 style="margin: 0% 10%;">Laat een bericht achter</h1><br>
-    @csrf
-    {!!Form::open(['action'=> 'ContactUsController@contactUsPost', 'method' => 'POST'])!!}
-        <div style="display: block; margin: 5% 10%;">
-            {{Form::label('name', 'Naam')}}<br>
-            {{Form::text('name', '', ['class' =>'col-sm-12', 'placeholder' => 'Naam'])}}
-        </div>
-        <div style="display: block; margin: 5% 10%;">
-            {{Form::label('email', 'Email')}}<br>
-            {{Form::text('email', '', ['class' =>'col-sm-12', 'placeholder' => 'voorbeeld@voorbeeld.com'])}}
-        </div>
-        <div style="display: block; margin: 5% 10%;">
-            {{Form::label('message', 'Tekst')}}<br>
-            {{Form::textarea('message', '', ['id' => 'article-ckeditor', 'class' =>'form-control', 'placeholder' => 'Tekst'])}}
-        </div>
-        <div style="margin-left: 10%;">{{Form::submit('Verstuur', ['class' => 'btn btn-primary' ])}}</div>
-        
-
-    {!! Form::close() !!}
-</main>--}}
-    
 @endsection
 

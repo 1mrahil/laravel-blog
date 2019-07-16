@@ -178,7 +178,7 @@ class BlogController extends Controller
 
         $post->delete();
 
-        return redirect('pages/blog/')->with('error', 'Post verwijderd!');
+        return redirect('pages/blog/')->with('succes', 'Post verwijderd!');
     }
    
 }
