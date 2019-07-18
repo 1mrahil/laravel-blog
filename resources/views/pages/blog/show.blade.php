@@ -20,25 +20,54 @@ SELAMAT JALAN | {{$post->title}}
         </div>
     <div class="pb-5">
       @auth
-       <a href="/pages/blog/{{$post->id}}/edit" class="btn btn-outline-dark">Wijzig</a>
-       
-       <form method="POST" action="/pages/blog/{{ $post->id }}" class="float-right" enctype="multipart/form-data" file="true">
-        @method('DELETE')
-        @csrf
-            <button class="btn btn-outline-danger" type="submit">Verwijderen</button>
+       <a href="/pages/blog/{{$post->id}}/edit" class="btn btn-outline-secondary">Wijzig</a>
+       <button class="btn btn-outline-danger float-right" data-catid="{{$post->id}}"  data-toggle="modal" data-target="#delete-modal">Verwijderen</button>
       
-       </form>
+          <!-- Modal -->
+          <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Bevestig verwijderen post</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                  <form method="POST" action="/pages/blog/{{ $post->id }}" enctype="multipart/form-data" file="true">
+                      @csrf
+                      @method('DELETE')
+                      
+                      <div class="modal-body">
+                        <p>
+                          Weet je zeker dat je deze post wil verwijderen?
+                        </p>
+                        
+                        <input type="hidden" name="post_id" id="post_id" value="">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuleren</button>
+                        <button type="submit" class="btn btn-outline-danger" >Verwijderen</button>
+                      </div>
+                     </form>
+                    
+                  </div>
+                </div>
+              </div>
        @endauth
     </div>
-       {{-- {!!Form::open(['action' => ['BlogController@destroy', $post->id], 'method' =>'POST', 'class' => 'float-right'])!!}
-       {{Form::hidden('_method', 'DELETE')}} 
-       {{Form::submit('Verwijderen', ['class' =>'btn btn-danger'])}}
-       {!! Form::close() !!} --}}
-   </div>
-      
+  </div>
+
+   
+  
 </main>
 
-
+{{-- <form method="POST" action="/pages/blog/{{ $post->id }}" class="float-right" enctype="multipart/form-data" file="true">
+        @csrf
+        @method('DELETE')
+        
+            <button class="btn btn-outline-danger" type="submit" data-toggle="modal" data-target="#delete-modal">Verwijderen</button>
+      
+       </form> --}}
   
 @endsection  
   

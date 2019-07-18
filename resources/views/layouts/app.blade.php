@@ -28,10 +28,21 @@
             @yield('content')
     </main>
 </body>
+<script>
+
+  $('#delete-modal').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget)
+
+    var post_id = button.data('catid')
+    var modal = $(this)
+
+    modal.find('.modal-body #post_id').val(post_id);
+  })
+
+</script>
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
-        
-
         CKEDITOR.replace( 'article-ckeditor' );
     </script>
 </html>

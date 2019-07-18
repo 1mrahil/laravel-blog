@@ -39,12 +39,12 @@
          </div>
          <div class="form-group has-warning">
            {{-- <label class="form-control-label" for="message" name="message">Bericht*</label> --}}
-           <textarea name="message" id="text" cols="30" rows="10" class="form-control form-control-danger" placeholder="Laat een bericht achter*" required>{{ old('message') }}</textarea>
+           <textarea name="message" id="article-ckeditor" cols="30" rows="10" class="form-control form-control-danger" placeholder="Laat een bericht achter*" required>{{ old('message') }}</textarea>
            <small class="form-text text-muted" id="emailHelp">*verplicht</small>
            <small class="text-danger"></small>
          </div>
    </fieldset>
-   <button class="btn btn-outline-dark" type="submit">Verzenden</button>
+   <button class="btn btn-outline-secondary" type="submit">Verzenden</button>
  </form>
  </div><!-- container p-5 -->
 
