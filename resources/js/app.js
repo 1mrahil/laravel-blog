@@ -34,3 +34,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+$('#delete-modal').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget)
+
+    var post_id = button.data('catid')
+    var modal = $(this)
+
+    modal.find('.modal-body #post_id').val(post_id);
+  })

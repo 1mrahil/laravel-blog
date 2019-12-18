@@ -20,8 +20,8 @@ SELAMAT JALAN | {{$post->title}}
         </div>
     <div class="pb-5">
       @auth
-       <a href="/pages/blog/{{$post->id}}/edit" class="btn btn-outline-secondary">Wijzig</a>
-       <button class="btn btn-outline-danger float-right" data-catid="{{$post->id}}"  data-toggle="modal" data-target="#delete-modal">Verwijderen</button>
+       <a href="/pages/blog/{{$post->id}}/edit" class="btn btn-secondary">Wijzig</a>
+       <button class="btn btn-danger float-right" data-catid="{{$post->id}}"  data-toggle="modal" data-target="#delete-modal">Verwijderen</button>
       
           <!-- Modal -->
           <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -45,8 +45,8 @@ SELAMAT JALAN | {{$post->title}}
                         <input type="hidden" name="post_id" id="post_id" value="">
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-outline-danger" >Verwijderen</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuleren</button>
+                        <button type="submit" class="btn btn-danger" >Verwijderen</button>
                       </div>
                      </form>
                     

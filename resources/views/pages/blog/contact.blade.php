@@ -44,7 +44,7 @@
            <small class="text-danger"></small>
          </div>
    </fieldset>
-   <button class="btn btn-outline-secondary" type="submit">Verzenden</button>
+   <button class="btn btn-secondary" type="submit">Verzenden</button>
  </form>
  </div><!-- container p-5 -->
 

@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/blog.css') }}" rel="stylesheet" >
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     @include('inc.navbar')
@@ -28,19 +28,7 @@
             @yield('content')
     </main>
 </body>
-<script>
 
-  $('#delete-modal').on('show.bs.modal', function (event) {
-
-    var button = $(event.relatedTarget)
-
-    var post_id = button.data('catid')
-    var modal = $(this)
-
-    modal.find('.modal-body #post_id').val(post_id);
-  })
-
-</script>
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'article-ckeditor' );

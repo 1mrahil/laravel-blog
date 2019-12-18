@@ -25,7 +25,7 @@
                 <input type="file" class="form-control-file" name="cover_image" aria-describedby="fileHelpId">
                 <small id="fileHelpId" class="form-text text-muted">Kies een afbeelding</small>
             </div>
-            <button class="btn btn-outline-secondary" type="submit">Wijzigen</button>
+            <button class="btn btn-secondary" type="submit">Wijzigen</button>
         </fieldset>
     </form>
 </div>
