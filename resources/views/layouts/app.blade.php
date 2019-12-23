@@ -27,6 +27,10 @@
             @include('inc.messages')
             @yield('content')
     </main>
+    @section('footer')
+        @include('inc.footer')
+        @show
+    {{-- @include('inc.footer')  --}}
 </body>
 
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
