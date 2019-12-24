@@ -23,14 +23,13 @@
 <body>
     @include('inc.navbar')
     
-    <main style="margin-top: 10%;">
+    <main>
             @include('inc.messages')
             @yield('content')
     </main>
     @section('footer')
         @include('inc.footer')
         @show
-    {{-- @include('inc.footer')  --}}
 </body>
 
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>

@@ -7,10 +7,10 @@ SELAMAT JALAN | {{$post->title}}
 
 
 @section('content')
-<main>
+<main class="py-5 mt-5">
   
   <div class="mx-auto" style="width: 50%;">
-    <h3 class="pb-5">{{$post->title}}</h3>
+    <h3 class="pb-5 text-center">{{$post->title}}</h3>
     <img class="img-fluid w-100" src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->cover_image}}">
       <hr>
       <small>Geplaatst door {{$post->user->name}} op {{$post->created_at}}</small>
@@ -18,7 +18,7 @@ SELAMAT JALAN | {{$post->title}}
         <div class="pb-5">
        {!!$post->body!!}
         </div>
-    <div class="pb-5">
+    <div>
       @auth
        <a href="/pages/blog/{{$post->id}}/edit" class="btn btn-secondary">Wijzig</a>
        <button class="btn btn-danger float-right" data-catid="{{$post->id}}"  data-toggle="modal" data-target="#delete-modal">Verwijderen</button>

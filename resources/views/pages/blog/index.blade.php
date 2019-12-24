@@ -4,7 +4,7 @@
 
 
 @section('content')
-<main class="pb-5">
+<main class="py-5 mt-5">
   <div>
     <h2 class="pb-5 text-center">Recente posts</h2>
   </div>

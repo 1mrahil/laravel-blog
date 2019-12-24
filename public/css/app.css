@@ -14187,7 +14187,8 @@ a.text-dark:focus {
 }
 
 .footer {
-  position: fixed;
+  position: relative;
+  right: 0;
   left: 0;
   bottom: 0;
   width: 100%;
