@@ -23,11 +23,11 @@
 <body>
     @include('inc.navbar')
     
-    <main>
-            @include('inc.messages')
-            @yield('content')
+    <main class="blog-content">
+        @include('inc.messages')
+        @yield('content')
     </main>
-    @section('footer')
+        @section('footer')
         @include('inc.footer')
         @show
 </body>
