@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="py-5">
+<main class="card-spacing">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
