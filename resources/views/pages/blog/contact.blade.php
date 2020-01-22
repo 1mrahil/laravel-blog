@@ -5,7 +5,7 @@
 
 @section('content')
 
-<div class="container p-5 mt-5">
+<div class="container p-5">
     <h2 class="text-center pb-5">Heeft u een vraag?</h2>
  <form method="POST" action="/pages/blog/contact">
    @csrf

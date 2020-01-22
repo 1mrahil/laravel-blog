@@ -7,7 +7,7 @@ SELAMAT JALAN | {{$post->title}}
 
 
 @section('content')
-<main class="py-5 mt-5">
+<main class="py-5">
   
   <div class="mx-auto" style="width: 50%;">
     <h3 class="pb-5 text-center">{{$post->title}}</h3>

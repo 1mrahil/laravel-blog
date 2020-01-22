@@ -23,8 +23,12 @@
 <body>
     @include('inc.navbar')
     
+    
+
     <main class="blog-content">
+        <div class="pt-5">
         @include('inc.messages')
+        </div>
         @yield('content')
     </main>
         @section('footer')
