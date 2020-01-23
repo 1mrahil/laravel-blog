@@ -30,6 +30,8 @@ body {
     object-fit: cover;
 }
 
+//hero image
+
 .hero-image {
     width: 100vw;
     height: 100vh;
@@ -52,11 +54,13 @@ body {
     color: white;
 }
 
-i {
-    margin-top: 0.2em;
-}
-
 .card-spacing {
     margin-top: 20vh;
     margin-bottom: 10vh;
 }
+
+.message-spacing {
+    padding-top: 3.5rem;
+ }
+
+

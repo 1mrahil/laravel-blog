@@ -26,7 +26,7 @@
     
 
     <main class="blog-content">
-        <div class="pt-5">
+        <div class="message-spacing">
         @include('inc.messages')
         </div>
         @yield('content')
