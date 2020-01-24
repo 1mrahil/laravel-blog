@@ -6,7 +6,7 @@
 @section('content')
 <main class="py-5">
   <div>
-    <h2 class="pb-5 text-center">Recente posts</h2>
+    <h2 class="py-5 text-center">Recente posts</h2>
   </div>
 
     @if(count($posts)> 0)

@@ -9,8 +9,8 @@ SELAMAT JALAN | {{$post->title}}
 @section('content')
 <main class="py-5">
   
-  <div class="mx-auto" style="width: 50%;">
-    <h3 class="pb-5 text-center">{{$post->title}}</h3>
+  <div class="mx-auto w-50">
+    <h3 class="py-5 text-center">{{$post->title}}</h3>
     <img class="img-fluid w-100" src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->cover_image}}">
       <hr>
       <small>Geplaatst door {{$post->user->name}} op {{$post->created_at}}</small>

@@ -6,7 +6,7 @@
 @section('content')
 @auth
     <div class="container py-5">
-        <h3 class="pb-5">Nieuwe post</h3>
+        <h3 class="py-5">Nieuwe post</h3>
         <form method="POST" action="/pages/blog" enctype="multipart/form-data" file="true">
             @csrf
             <fieldset>

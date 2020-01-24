@@ -22,13 +22,10 @@
 </head>
 <body>
     @include('inc.navbar')
-    
-    
-
-    <main class="blog-content">
         <div class="message-spacing">
         @include('inc.messages')
         </div>
+    <main class="blog-content">
         @yield('content')
     </main>
         @section('footer')
